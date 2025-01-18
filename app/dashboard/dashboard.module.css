@@ -16,6 +16,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  
 }
 
 .logoContainer {
@@ -53,6 +55,9 @@
   padding: 2rem;
   display: flex;
   justify-content: center;
+  position: fixed;
+  margin: 7rem;
+  left: -6.5rem;
 }
 .navList {
   width: 24rem;

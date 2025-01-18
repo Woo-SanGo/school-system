@@ -1,21 +1,27 @@
-/* Base container for the layout */
 .container {
-  display: flex;
-  flex-direction: column;
-  min-height: 110vh;
-  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-rows: 100px 1fr; /* Header and content */
+  grid-template-columns: 250px 1fr; /* Sidebar and main content */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent overall scrolling */
+  position: relative; /* Ensures proper stacking of elements */
 }
 
-/* Header styling */
+/* Header styles */
 .header {
+  grid-row: 1 / 2; /* Occupies the first row */
+  grid-column: 1 / 3; /* Spans across both columns */
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 60px;
+  height: 100px;
   background-color: #812121;
-  color: rgb(10, 10, 10);
-  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  padding: 0 16px;
 }
 
 .logoContainer {
@@ -45,20 +51,11 @@
   padding: 0.7rem;
 }
 
-.sidebar {
-  width: 18rem;
-  height: 50rem;
-  grid-area: sidebar;
-  background-color: #e0e0e0;
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-}
 .navList {
-  width: 24rem;
+  width: 20rem;
   height: 4.5rem;
 }
-.navList li{
+.navList li {
   list-style-type: none;
   text-decoration: none;
 }
@@ -72,129 +69,47 @@
 }
 .navList a:hover {
   width: 20.7rem;
-  background-color: #4a90e2; /* Change the background color when hovering */
-  color: white; /* Change text color to white when hovering */
   border-radius: 5px;
   align-items: center;
   display: flex;
-   /* Optional: adds rounded corners */
 }
-.navList a span{
+.navList a span {
   font-size: 1.4rem;
   padding: 1rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: -50px;
 }
 
-/* Main content area styling */
+/* Sidebar styles */
+.sidebar {
+  grid-row: 2 / 3; /* Starts below the header */
+  grid-column: 1 / 2; /* Occupies the first column */
+  position: fixed;
+  top: 100px; /* Matches header height */
+  width: 250px; /* Sidebar width */
+  height: calc(100vh - 100px); /* Full height minus header */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background-color: #e0e0e0;
+  z-index: 900; /* Makes sure sidebar is on top of main content */
+}
+
+/* Main content styles */
 .main {
-  width: 70%;
-  padding: 90px;
-  margin-left: 270px;
-  position: relative;
-  display: grid;
-  margin-top: -60rem;
-  padding: 8rem;
+  grid-row: 2 / 3; 
+  grid-column: 2 / 3; 
+  margin-top: 100px; /* Adjusted for header */
+  margin-left: 250px; /* Adjusted for sidebar */
+  padding: 16px;
+  height: calc(100vh - 100px); /* Full height minus header */
 }
 
-/* Responsive styling for smaller screens */
-@media (max-width: 768px) {
-  .layout1 {
-    flex-direction: column;
-  }
-
-  .left,
-  .right {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .top {
-    flex-direction: column;
-  }
-
-  .one,
-  .two,
-  .three {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .bottom {
-    flex-direction: column;
-  }
-
-  .four,
-  .five {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .sidebar {
-    width: 100%;
-    position: relative;
-    height: auto;
-  }
-
-  .main {
-    margin-left: 0;
-  }
-}
-/* EditableTable.module.css */
-
-.container {
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-.heading {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
+/* Table styles */
 .table {
   border-collapse: collapse;
   width: 70%;
-  height: 0;
-}
-
-.table th,
-.table td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
-}
-
-.table th {
-  background-color: #f4f4f4;
-  font-weight: bold;
-}
-
-.table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.table tr:hover {
-  background-color: #f1f1f1;
-}
-
-.input {
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
-}
-
-.pre {
-  margin-top: 20px;
-  background: #f8f8f8;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  overflow-x: auto;
-}
-
-.table {
-  width: 70%;
-  border-collapse: collapse;
   margin: 20px 0;
   font-size: 16px;
   text-align: left;
@@ -211,6 +126,55 @@
   font-weight: bold;
 }
 
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button styles */
+.addButton,
+.submitButton,
+.deleteButton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.addButton {
+  background-color: #28a745; /* Green */
+}
+
+.addButton:hover {
+  background-color: #218838;
+}
+
+.submitButton {
+  background-color: #007bff; /* Blue */
+  margin-left: 700px;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+.deleteButton {
+  background-color: #dc3545; /* Red */
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+/* Input styles */
 .input {
   width: 100%;
   padding: 5px;
@@ -220,32 +184,35 @@
   box-sizing: border-box;
 }
 
-/* Style for Add Row button */
-.addButton {
-  display: inline-block;
+.pre {
   margin-top: 20px;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #ffffff;
-  background-color: #28a745; /* Green background */
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  background: #f8f8f8;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow-x: auto;
 }
 
-.addButton:hover {
-  background-color: #218838; /* Darker green on hover */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Full-width layout on small screens */
+    grid-template-rows: auto 1fr;
+  }
+
+  .header {
+    position: relative; /* Fixes header position on small screens */
+    width: 100%;
+    height: 80px;
+  }
+
+  .sidebar {
+    position: relative; /* Sidebar will not be fixed on small screens */
+    width: 100%;
+    height: auto;
+  }
+
+  .main {
+    margin-left: 0;
+    margin-top: 80px; /* Adjusted for new header height */
+  }
 }
-
-.addButton:active {
-  transform: scale(0.98); /* Slight shrink effect on click */
-}
-
-.addButton:focus {
-  outline: none;
-  box-shadow: 0 0 8px rgba(40, 167, 69, 0.6); /* Focus glow effect */
-}
-
-

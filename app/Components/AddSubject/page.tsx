@@ -2,34 +2,34 @@
 
 import React from 'react';
 import AdminLayout from '../AdminLayout/adminLayout';
-import styles from './addTeacher.module.css';
+import styles from './AddSubject.module.css';
 
-const AddTeacherPage = () => {
+const AddSubjectPage = () => {
   return (
     <AdminLayout>
       {/* Topbar */}
       <div className={styles.topbar}>
-        Add Teacher
+        Add Subject
       </div>
 
       {/* Red Popup Box */}
       <div className={styles.popupBox}>
-        Add Teacher
+        Add Subject
       </div>
 
       {/* Form */}
       <form className={styles.form}>
         <div className={styles.formGroup}>
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" placeholder="Enter email" />
+          <label htmlFor="subjectName">Subject Name</label>
+          <input type="text" id="subjectName" placeholder="Enter subject name" />
         </div>
         <div className={styles.formGroup}>
-          <label htmlFor="firstName">First Name</label>
-          <input type="text" id="firstName" placeholder="Enter first name" />
+          <label htmlFor="department">Department</label>
+          <input type="text" id="department" placeholder="Enter department" />
         </div>
         <div className={styles.formGroup}>
-          <label htmlFor="lastName">Last Name</label>
-          <input type="text" id="lastName" placeholder="Enter last name" />
+          <label htmlFor="teacherName">Teacher Name</label>
+          <input type="text" id="teacherName" placeholder="Enter teacher name" />
         </div>
         <button type="submit" className={styles.submitButton}>
           Add
@@ -39,4 +39,4 @@ const AddTeacherPage = () => {
   );
 };
 
-export default AddTeacherPage;
+export default AddSubjectPage;

@@ -1,15 +1,16 @@
-"use client"
+'use client';
+
 import Image from 'next/image';
 import styles from './Login.module.css';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';  // Add the useRouter hook
+import { useRouter } from 'next/navigation'; // Add the useRouter hook
 
 const LoginPage = () => {
   const [userInput, setUserInput] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const router = useRouter();  // Initialize router
+  const router = useRouter(); // Initialize router
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -49,7 +50,7 @@ const LoginPage = () => {
             has continuously evolved to meet the needs of its students and the demands of modern education.
             As part of this evolution, RUPP has introduced a new school management platform designed to enhance academic transparency and accessibility.
             This innovative system enables students to conveniently check their exam scores and track their GPA,
-            fostering a more streamlined approach to academic management. These advancements reflect the university's commitment to leveraging technology to support student success and achieve its vision for continued growth and development.
+            fostering a more streamlined approach to academic management. These advancements reflect the university&apos;s commitment to leveraging technology to support student success and achieve its vision for continued growth and development.
           </p>
         </div>
       </div>

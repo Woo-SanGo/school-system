@@ -1,6 +1,5 @@
 import Header from '../Components/Header';
 import Navbar from '../Components/Navbar';
-import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../Components/styles.module.css';
 

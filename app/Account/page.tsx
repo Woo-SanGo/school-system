@@ -1,11 +1,13 @@
 "use client"; // Ensure client-side rendering
 
+import { useState } from 'react'; // Import useState hook
 import Header from '../Components/Header';
 import Navbar from '../Components/Navbar';
 import styles from '../Components/styles.module.css'; // Import styles from the Components/Styles
-import { useState } from 'react';
+import Image from 'next/image'; // Import Image component
 
 const Account = () => {
+  // Initialize userData state with default values
   const [userData, setUserData] = useState({
     firstName: 'Dok',
     lastName: 'Vottey',
@@ -17,6 +19,7 @@ const Account = () => {
     profilePicture: '/default-profile.jpg', // Default profile picture
   });
 
+  // Handle profile picture change
   const handleProfilePictureChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
@@ -58,10 +61,12 @@ const Account = () => {
                   <span>Upload your pic</span>
                 </div>
               ) : (
-                <img
+                <Image
                   src={userData.profilePicture}
                   alt="Profile"
                   className={styles.profilePicture}
+                  width={100} // Set the width for the image
+                  height={100} // Set the height for the image
                 />
               )}
             </label>

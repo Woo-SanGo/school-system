@@ -2,7 +2,7 @@
 
 import React from 'react';
 import AdminLayout from '../AdminLayout/adminLayout';
-import styles from './addTeacher.module.css';
+import styles from './AddStudent.module.css';
 
 const AddTeacherPage = () => {
   return (
@@ -14,7 +14,7 @@ const AddTeacherPage = () => {
 
       {/* Red Popup Box */}
       <div className={styles.popupBox}>
-        Add Teacher
+        Add Student
       </div>
 
       {/* Form */}

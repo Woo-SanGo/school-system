@@ -1,75 +1,33 @@
 'use client';
-import Link from 'next/link';
-import React, { ReactNode, useState } from 'react';
-import styles from './teacher.module.css'; // Ensure you adjust the path to the correct location for your styles
 
-// Layout component
-const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
-  return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <div className={styles.logoContainer}>
-          <img src="/logo.png" alt="RUPP Logo" className={styles.logo} />
-          <ul className={styles.universityInfo}>
-            <li className={styles.khmerText}>សាកលវិទ្យាល័យភូមន្ទភ្នំពេញ</li>
-            <li className={styles.englishText}>ROYAL UNIVERSITY OF PHNOM PENH</li>
-          </ul>
-        </div>
-      </header>
-      <aside className={styles.sidebar}>
-        <nav>
-          <ul className={styles.navList}>
-            <li>
-              <Link href="/dashboard">
-                <span className={styles.icon}>📊</span> Dashboard
-              </Link>
-            </li>
-            <li>
-              <Link href="/teachermanage">
-                <span className={styles.icon}>📘</span> Teacher
-              </Link>
-            </li>
-            <li>
-              <Link href="/studentmanage">
-                <span className={styles.icon}>👥</span> Student
-              </Link>
-            </li>
-            <li>
-              <Link href="/notification">
-                <span className={styles.icon}>🔔</span> Notification
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-      <main className={styles.main}>{children}</main>
-    </div>
-  );
-};
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import styles from "./teacher.module.css";
 
-// Teacher Class Form component
 const TeacherClassForm = () => {
   const [formData, setFormData] = useState({
-    college: '',
-    department: '',
-    year: '',
-    semester: '',
-    generation: '',
-    className: '',
-    subject: '',
+    college: "",
+    department: "",
+    year: "",
+    semester: "",
+    generation: "",
+    className: "",
+    subject: "",
   });
 
+  const router = useRouter();
+
   const colleges = [
-    'Faculty of Science',
-    'Faculty of Social Science and Humanities',
-    'Faculty of Engineering',
-    'Faculty of Development Studies',
-    'Faculty of Education',
-    'Institute For International Study and Public Policy',
+    "Faculty of Science",
+    "Faculty of Social Science and Humanities",
+    "Faculty of Engineering",
+    "Faculty of Development Studies",
+    "Faculty of Education",
+    "Institute For International Study and Public Policy",
   ];
 
-  const years = ['Year 1', 'Year 2', 'Year 3', 'Year 4'];
-  const semesters = ['Semester 1', 'Semester 2'];
+  const years = ["Year 1", "Year 2", "Year 3", "Year 4"];
+  const semesters = ["Semester 1", "Semester 2"];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -77,13 +35,18 @@ const TeacherClassForm = () => {
   };
 
   const handleSubmit = () => {
-    if (Object.values(formData).includes('')) {
-      alert('Please fill all the fields.');
-      return;
-    }
-    console.log('Form Data:', formData);
-    // Perform necessary actions on form submission, like API calls
+    console.log("Form Data:", formData);
+    localStorage.setItem("formData", JSON.stringify(formData)); // Save form data locally
+    alert("Form data saved!");
+    router.push("/student"); // Navigate to the next page
   };
+
+  useEffect(() => {
+    const savedData = localStorage.getItem("formData");
+    if (savedData) {
+      setFormData(JSON.parse(savedData));
+    }
+  }, []);
 
   return (
     <div className={styles.formContainer}>
@@ -174,20 +137,11 @@ const TeacherClassForm = () => {
         </label>
         <br />
         <button type="button" onClick={handleSubmit}>
-          Ok
+          OK
         </button>
       </form>
     </div>
   );
 };
 
-// Main layout rendering the form
-const MainPage = () => {
-  return (
-    <Layout>
-      <TeacherClassForm />
-    </Layout>
-  );
-};
-
-export default MainPage;
+export default TeacherClassForm;

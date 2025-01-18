@@ -42,7 +42,7 @@ const ContinueName: FC = () => {
             new school management platform designed to enhance academic transparency
             and accessibility. This innovative system enables students to conveniently
             check their exam scores and track their GPA, fostering a more streamlined
-            approach to academic management. These advancements reflect the university's
+            approach to academic management. These advancements reflect the university&apos;s
             commitment to leveraging technology to support student success and achieve
             its vision for continued growth and development.
           </p>
@@ -123,7 +123,7 @@ const ContinueName: FC = () => {
             />
           </div>
           <div className={styles.inputGroup}>
-            <label>Email (school email*)</label>
+            <label>Email (school email&apos;s)</label>
             <input
               type="email"
               name="email"

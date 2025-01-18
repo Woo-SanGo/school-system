@@ -1,27 +1,37 @@
+import { ReactNode } from "react";
+import Image from "next/image"; // Import Image from next/image for optimized image loading
 import Link from "next/link";
-import React, { ReactNode } from "react";
-import styles from "../dashboard/dashboard.module.css"; // Update this path to where the styles are located
+import styles from "../dashboard/dashboard.module.css"; // Adjust this path to where your styles are located
 
 interface LayoutProps {
   children: ReactNode;
-  layoutType?: "layout1" | "layout2" | "layout3";
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, layoutType }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className={styles.container}>
+      {/* Header Section */}
       <header className={styles.header}>
         <div className={styles.logoContainer}>
-          <img src="/logo.png" alt="RUPP Logo" className={styles.logo} />
+          {/* Using Next.js Image for optimized image */}
+          <Image
+            src="/logo.png"
+            alt="RUPP Logo"
+            className={styles.logo}
+            width={100} // Specify width
+            height={100} // Specify height
+          />
           <ul className={styles.universityInfo}>
             <li className={styles.khmerText}>សាកលវិទ្យាល័យភូមន្ទភ្នំពេញ</li>
             <li className={styles.englishText}>ROYAL UNIVERSITY OF PHNOM PENH</li>
           </ul>
         </div>
       </header>
+
+      {/* Sidebar Section */}
       <aside className={styles.sidebar}>
-      <nav>
-      <ul className={styles.navList}>
+        <nav>
+          <ul className={styles.navList}>
             <li>
               <Link href="/dashboard">
                 <span className={styles.icon}>📊</span> Dashboard
@@ -37,53 +47,26 @@ const Layout: React.FC<LayoutProps> = ({ children, layoutType }) => {
                 <span className={styles.icon}>👥</span> Student
               </Link>
             </li>
-            <li>
-              <Link href="/notification">
-                <span className={styles.icon}>🔔</span> Notification
-              </Link>
-            </li>
           </ul>
-      </nav>
+        </nav>
       </aside>
-      <main className={styles.main}>{children}
-        <div className={styles.layout1}>{children}
-        <div className={styles.left}>
-          <ul>
-            <li><p>0</p></li>
-            <li><a href="#"><span>📘</span>Total teacher</a></li>
-          </ul>
-        </div>
-        <div className={styles.right}>
-        <ul>
-            <li><p>0</p></li>
-            <li><a href="#"><span>👥</span>Total student</a></li>
-          </ul>
-        </div>
-        </div>
-        <div className={styles.layout2}><p>Dear teachers, please create a class first before proceeding with student grading.</p>{children}
-        </div>
-        <div className={styles.layout3}>{children}
-          <div className={styles.top}>{children}
-            <div className={styles.one}>
-              <ul>
-              <Link href="/teacher">
-                <span className={styles.icon}>📘</span> Teacher
-              </Link>
-              </ul>
-            </div>
-            <div className={styles.two}>
-            <ul>
-                <Link href="/student">
-                <span className={styles.icon}>👥</span> Student
-              </Link>
-              </ul>
-            </div>
-          </div>
-        </div>
+
+      {/* Main Content Section */}
+      <main className={styles.main}>
+        {children}
       </main>
-      
     </div>
   );
 };
 
-export default Layout;
+const MainPage = () => {
+  return (
+    <Layout>
+      {/* Main content for the page */}
+      <h1>Welcome to the Dashboard!</h1>
+      <p>This is the main content area of the dashboard page.</p>
+    </Layout>
+  );
+};
+
+export default MainPage;

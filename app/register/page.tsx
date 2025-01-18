@@ -37,7 +37,7 @@ const RegisterPage = () => {
             has continuously evolved to meet the needs of its students and the demands of modern education.
             As part of this evolution, RUPP has introduced a new school management platform designed to enhance academic transparency and accessibility.
             This innovative system enables students to conveniently check their exam scores and track their GPA,
-            fostering a more streamlined approach to academic management. These advancements reflect the university's commitment to leveraging technology to support student success and achieve its vision for continued growth and development.
+            fostering a more streamlined approach to academic management. These advancements reflect the university&apos;s commitment to leveraging technology to support student success and achieve its vision for continued growth and development.
           </p>
         </div>
       </div>

@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
 }
 
 .logoContainer {
@@ -45,7 +46,6 @@
   padding: 0.7rem;
 }
 
-/* Sidebar styling */
 .sidebar {
   width: 18rem;
   height: 50rem;
@@ -54,6 +54,9 @@
   padding: 2rem;
   display: flex;
   justify-content: center;
+  position: fixed;
+  margin: 7rem;
+  left: -6.5rem;
 }
 
 .navList {
@@ -77,10 +80,11 @@
 
 .navList a:hover {
   width: 20.7rem;
-  background-color: #4a90e2;
-  color: white;
+  background-color: #4a90e2; /* Change the background color when hovering */
+  color: white; /* Change text color to white when hovering */
   border-radius: 5px;
   align-items: center;
+  display: flex;
 }
 
 .navList a span {
@@ -186,29 +190,24 @@
   border-radius: 4px;
 }
 
-/* Button styles */
-.button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+/* Create a button class for scoped button hover */
+.formContainer button {
+  width: 10%;
+  height: 2rem;
+  margin-left: 37rem;
+  transition: background-color 0.3s, color 0.3s; /* Optional transition effect */
 }
 
-/* Apply hover effect for buttons */
-.button:hover {
+/* Scoped hover effect */
+.formContainer button:hover {
   background-color: #becad8;
 }
 
-/* Active state for buttons */
-.button:active {
+.formContainer button:active {
   background-color: #c8d1da;
 }
 
-/* Disabled state for buttons */
-.button:disabled {
+.formContainer button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }

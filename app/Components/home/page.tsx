@@ -6,10 +6,10 @@ import styles from './home.module.css'; // Make sure to create this CSS module
 const HomePage = () => {
   // Example static data. You can replace this with dynamic data based on your backend.
   const stats = [
-    { title: 'Students', value: 0, link: '/manage-student', color: '#D8B0FF' },  // Red
-    { title: 'Teachers', value: 0, link: '/manage-teacher', color: '#33c1ff' },  // Blue
-    { title: 'Departments', value: 0, link: '/manage-department', color: '#4caf50' },      // Green
-    { title: 'Subjects', value: 0, link: '/manage-subject', color: '#f4b400' },             // Yellow
+    { title: 'Students', value: 0, link: '/Components/ManageStudent', color: '#D8B0FF' },  // Red
+    { title: 'Teachers', value: 0, link: '/Components/ManageTeacher', color: '#33c1ff' },  // Blue
+    { title: 'Departments', value: 0, link: '/Components/ManageDepartment', color: '#4caf50' },      // Green
+    { title: 'Subjects', value: 0, link: '/Components/ManageSubject', color: '#f4b400' },             // Yellow
   ];
 
   return (
