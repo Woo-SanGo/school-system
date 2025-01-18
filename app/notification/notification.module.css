@@ -1,0 +1,99 @@
+/* Base container for the layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styling */
+  .header {
+    width: 98%;
+    height: 60px;
+    background-color: #812121;
+    color: rgb(10, 10, 10);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 40px;
+    margin-left: 200px;
+  }
+  
+  .universityInfo {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .khmerText {
+    font-size: 25px;
+  }
+  
+  .englishText {
+    font-size: 15px;
+    padding: 0.7rem;
+  }
+  
+  .sidebar {
+    width: 18rem;
+    height: 50rem;
+    grid-area: sidebar;
+    background-color: #e0e0e0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  .navList {
+    width: 24rem;
+    height: 4.5rem;
+  }
+  .navList li{
+    list-style-type: none;
+    text-decoration: none;
+  }
+  .navList a {
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .navList a:hover {
+    width: 20.7rem;
+    background-color: #4a90e2; /* Change the background color when hovering */
+    color: white; /* Change text color to white when hovering */
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+     /* Optional: adds rounded corners */
+  }
+  .navList a span{
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+  .notification{
+    width: 96rem;
+    height: 54rem;
+    margin-left: 22rem;
+    padding: 2rem;
+    margin-top: -55.3rem;
+  }
+  .notification h1 {
+    margin-left: 7rem;
+  }
+  .notification h3 {
+    margin-left: 7rem;
+  }
+  

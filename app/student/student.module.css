@@ -1,0 +1,147 @@
+.container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left {
+    flex: 1;
+    background-color: #812121;
+    color: white;
+    padding: 2rem;
+  }
+  
+  .logo {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .left h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .left h2 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .welcomeText {
+    margin-top: 2rem;
+    line-height: 1.8;
+  }
+
+  .right {
+    flex: 1;
+    background-color: #181818;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .right {
+    background-color: #f5f7ff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+  }
+  
+  .right h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .right h3 {
+    font-size: 1rem;
+    margin-top: .5rem;
+    color: black;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputGroup label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #444;
+  }
+  
+  .inputGroup input,
+  .inputGroup select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .inputGroup select {
+    background-color: #fff;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between; /* Positions the buttons at opposite ends */
+    align-items: center; /* Ensures buttons align vertically */
+    margin-top: 20px;
+  }
+  
+  .backButton {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    color: white;
+    background-color: #812121;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .backButton:hover {
+    background-color: #500707;
+  }
+  
+  .submitButton {
+    padding: 10px 20px;
+    background-color: #812121;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .submitButton:hover {
+    background-color: #500707;
+  }
+  
+  
+  
+  .right p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    color: black;
+  }
+  
+  .right p a {
+    color: #812121;
+  }
+  
+  .right p a:hover {
+    text-decoration: underline;
+    
+  }
+  

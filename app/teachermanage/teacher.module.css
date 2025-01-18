@@ -1,0 +1,214 @@
+/* Base container for the layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 110vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+.header {
+  width: 98%;
+  height: 60px;
+  background-color: #812121;
+  color: rgb(10, 10, 10);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 40px;
+  margin-left: 200px;
+}
+
+.universityInfo {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.khmerText {
+  font-size: 25px;
+}
+
+.englishText {
+  font-size: 15px;
+  padding: 0.7rem;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 18rem;
+  height: 50rem;
+  grid-area: sidebar;
+  background-color: #e0e0e0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.navList {
+  width: 24rem;
+  height: 4.5rem;
+}
+
+.navList li {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.navList a {
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navList a:hover {
+  width: 20.7rem;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.navList a span {
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+/* Main content area styling */
+.main {
+  width: 70%;
+  padding: 90px;
+  position: fixed;
+  margin-left: 270px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .layout1 {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .top {
+    flex-direction: column;
+  }
+
+  .one,
+  .two,
+  .three {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .bottom {
+    flex-direction: column;
+  }
+
+  .four,
+  .five {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+}
+
+/* sidebar.module.css */
+.formContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  margin: 4rem;
+  margin-left: 10rem;
+}
+
+.formContainer h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer label {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #555;
+}
+
+.formContainer label input {
+  width: 50%;
+  height: 2rem;
+  margin-left: 1rem;
+}
+
+.formContainer form label select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button styles */
+.button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Apply hover effect for buttons */
+.button:hover {
+  background-color: #becad8;
+}
+
+/* Active state for buttons */
+.button:active {
+  background-color: #c8d1da;
+}
+
+/* Disabled state for buttons */
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

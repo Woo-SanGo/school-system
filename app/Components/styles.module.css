@@ -1,0 +1,722 @@
+/* .container remains unchanged */
+.container {
+  width: 100%;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* .header remains unchanged */
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('/bg.jpg') no-repeat center;
+  background-size: cover;
+  height: 330px;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.title {
+  font-size: 5rem;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+/* Navbar and list remain unchanged */
+.navbar {
+  background-color: rgba(160, 0, 0, 0.9);
+  padding: 17px 0;
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navList li {
+  margin: 0 50px;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Hover and focus effects remain unchanged */
+.navList li:hover,
+.navList li:focus-within {
+  background-color: white;
+  color: rgba(160, 0, 0, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.navList li:hover::after,
+.navList li:focus-within::after {
+  content: '';
+  position: absolute;
+  border: white;
+  border-radius: 20px;
+}
+
+/* Link styles: Remove underline and change text color */
+.navItem {
+  text-decoration: none;   /* Remove underline */
+  color: inherit;          /* Inherit white color from li */
+}
+
+.navItem:hover,
+.navItem:focus {
+  color: rgba(160, 0, 0, 0.9); /* Change color on hover */
+}
+
+/*Home*/
+
+.eventsSection {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.eventsTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 30px;
+}
+
+.eventsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.eventCard {
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 30px; /* Adjust padding to fit content properly */
+  max-width: 400px;
+  text-align: center;
+}
+
+.eventImage {
+  border-radius: 50px;
+  margin-bottom: 20px; /* Reduced margin */
+}
+
+.eventTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00a2e8;
+  margin-bottom: 5px;
+}
+
+/* Updated eventDetail to keep items on the same line */
+.eventDetail {
+  display: inline-block; /* Keep the elements inline */
+  margin: 8px 0;
+  font-size: 2rem;
+}
+
+.eventDetail span {
+  margin-right: 1px; /* Add space between the icon and text */
+}
+
+.navigationButton {
+  font-size: 4rem;
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+.navigationButton:hover {
+  color: darkred;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footerLinks {
+  margin-top: 10px;
+}
+
+.footerLink {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+  color: #ff3e3e;
+}
+
+/* Enhanced Footer Styles */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 1rem;
+  text-align: left;
+  border-top: 5px solid #ff3e3e;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footerAbout,
+.footerLinks,
+.footerSocial {
+  flex: 1 1 300px;
+}
+
+.footerAbout h4,
+.footerLinkSection h5,
+.footerSocial h5 {
+  color: #ff3e3e;
+  margin-bottom: 10px;
+}
+
+.footerAbout p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.footerLinks ul,
+.footerSocial .socialLinks {
+  list-style: none;
+  padding: 0;
+}
+
+.footerLinks li,
+.footerSocial a {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 8px;
+}
+
+.footerLinks a,
+.footerSocial a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.footerLinks a:hover,
+.footerSocial a:hover {
+  color: #ff3e3e;
+}
+
+.footerSocial .socialLinks a {
+  margin-right: 15px;
+}
+
+.footerBottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.footerBottom p {
+  margin: 0;
+}
+
+/* Responsive design for Footer */
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* GPA style */
+
+.transcriptContainer {
+  margin-top: 20px;
+}
+
+.studentInfo {
+  display: flex;
+  justify-content: flex-start; /* Aligns content to the left */
+  margin-bottom: 15px;
+}
+
+.studentID, .academicYear {
+  font-weight: bold;
+  margin-right: 20px; /* Add some space between ID and academic year */
+}
+
+.transcriptTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.transcriptTable th, .transcriptTable td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.transcriptTable th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.noted {
+  margin-top: 30px;
+  font-size: 1.1rem;
+}
+
+.notedColumns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftColumn, .rightColumn {
+  width: 45%;
+}
+
+
+/* Help style */
+.helpSection {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.heroContainer {
+  background-color: #160e1d;
+  color: white;
+  padding: 50px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.helpContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.helpCategory {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 300px;
+  text-align: left;
+}
+
+.helpCategoryTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #160e1d;
+}
+
+.helpCategoryDescription {
+  font-size: 1.1rem;
+  color: #777;
+  margin-top: 15px;
+}
+
+.helpLink {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #a00000;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.helpLink:hover {
+  background-color: #8b0000;
+}
+
+/* About Style */
+/* Hero section styles */
+.heroSection {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #777;
+}
+
+.aboutContent {
+  margin-top: 30px;
+}
+
+.aboutContent p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.aboutContent ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.aboutContent li {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/*schedule*/
+.scheduleContent {
+  margin: 40px 20px;
+  text-align: center;
+}
+
+.scheduleTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.scheduleTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.scheduleTable th,
+.scheduleTable td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.scheduleTable th {
+  background-color: #f4f4f4;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.scheduleTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.scheduleTable tr:hover {
+  background-color: #e0e0e0;
+}
+
+/* Noted Section Styles */
+.notedSection {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.notedTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.notedDescription {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Profile Section */
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.profilePictureWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.uploadLabel {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uploadInput {
+  display: none;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #888;
+  border: 2px dashed #ccc;
+  text-align: center;
+}
+
+.profilePicture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.accountTableWrapper {
+  margin-top: 20px;
+}
+
+.accountTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.accountTable td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.accountTable td strong {
+  font-weight: bold;
+}
+
+/* GPA/page.module.css */
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.gpaButton {
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  background-color: rgba(160, 0, 0, 0.9);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gpaButton:hover {
+  background-color: rgba(160, 0, 0, 1);
+}
+
+/* Popup Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.yearList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.yearList li {
+  margin: 10px 0;
+}
+
+.yearList button {
+  padding: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(160, 0, 0, 0.9);
+  color: white;
+}
+
+.yearList button:hover {
+  background-color: rgba(160, 0, 0, 1);
+}
+
+.closeButton {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background-color: darkgray;
+}
+
+/* General Layout */
+.container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+/* Account Information Section */
+.accountContent {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.accountTitle {
+  font-size: 2.5rem; /* Larger font size for the title */
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Profile Section */
+.profileSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Profile Picture Section */
+.profilePictureWrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.profilePicture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #333;
+}
+
+.uploadLabel {
+  cursor: pointer;
+}
+
+/* Account Information Table */
+.accountTableWrapper {
+  margin-top: 20px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.accountTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.accountTable td {
+  padding: 12px;
+  font-size: 1.2rem; /* Larger font size for table content */
+  border: 1px solid #ddd;
+}
+
+.accountTable td strong {
+  color: #333;
+}
+
+.accountTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.accountTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Hover effect for the table */
+.accountTable td:hover {
+  background-color: #f1f1f1;
+}

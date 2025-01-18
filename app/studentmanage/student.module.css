@@ -1,0 +1,251 @@
+/* Base container for the layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 110vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: #812121;
+  color: rgb(10, 10, 10);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 40px;
+  margin-left: 200px;
+}
+
+.universityInfo {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.khmerText {
+  font-size: 25px;
+}
+
+.englishText {
+  font-size: 15px;
+  padding: 0.7rem;
+}
+
+.sidebar {
+  width: 18rem;
+  height: 50rem;
+  grid-area: sidebar;
+  background-color: #e0e0e0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.navList {
+  width: 24rem;
+  height: 4.5rem;
+}
+.navList li{
+  list-style-type: none;
+  text-decoration: none;
+}
+.navList a {
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+.navList a:hover {
+  width: 20.7rem;
+  background-color: #4a90e2; /* Change the background color when hovering */
+  color: white; /* Change text color to white when hovering */
+  border-radius: 5px;
+  align-items: center;
+  display: flex;
+   /* Optional: adds rounded corners */
+}
+.navList a span{
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+/* Main content area styling */
+.main {
+  width: 70%;
+  padding: 90px;
+  margin-left: 270px;
+  position: relative;
+  display: grid;
+  margin-top: -60rem;
+  padding: 8rem;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .layout1 {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .top {
+    flex-direction: column;
+  }
+
+  .one,
+  .two,
+  .three {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .bottom {
+    flex-direction: column;
+  }
+
+  .four,
+  .five {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+}
+/* EditableTable.module.css */
+
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 70%;
+  height: 0;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.pre {
+  margin-top: 20px;
+  background: #f8f8f8;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.table {
+  width: 70%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style for Add Row button */
+.addButton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #28a745; /* Green background */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.addButton:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.addButton:active {
+  transform: scale(0.98); /* Slight shrink effect on click */
+}
+
+.addButton:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.6); /* Focus glow effect */
+}
+
+

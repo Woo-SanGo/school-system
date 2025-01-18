@@ -1,0 +1,18 @@
+// prisma/schema.prisma
+
+datasource db {
+  provider = "mysql" // MySQL as the database provider
+  url      = env("DATABASE_URL") // Connection string from your .env file
+}
+
+generator client {
+  provider = "prisma-client-js" // Generates the Prisma Client
+}
+
+model User {
+  id        Int      @id @default(autoincrement()) // Auto-incrementing primary key
+  email     String   @unique                      // Unique email for each user
+  password  String                               // Encrypted password
+  userType  String                               // Role: "student" or "teacher"
+  createdAt DateTime @default(now())             // Automatically stores the creation timestamp
+}

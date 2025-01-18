@@ -1,0 +1,231 @@
+/* Base container for the layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 110vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+.header {
+  width: 98%;
+  height: 60px;
+  background-color: #812121;
+  color: rgb(10, 10, 10);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 40px;
+  margin-left: 200px;
+}
+
+.universityInfo {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.khmerText {
+  font-size: 25px;
+}
+
+.englishText {
+  font-size: 15px;
+  padding: 0.7rem;
+}
+
+.sidebar {
+  width: 18rem;
+  height: 50rem;
+  grid-area: sidebar;
+  background-color: #e0e0e0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.navList {
+  width: 24rem;
+  height: 4.5rem;
+}
+.navList li{
+  list-style-type: none;
+  text-decoration: none;
+}
+.navList a {
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+.navList a:hover {
+  width: 20.7rem;
+  background-color: #4a90e2; /* Change the background color when hovering */
+  color: white; /* Change text color to white when hovering */
+  border-radius: 5px;
+  align-items: center;
+  display: flex;
+   /* Optional: adds rounded corners */
+}
+.navList a span{
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+/* Main content area styling */
+.main {
+  width: 70%;
+  padding: 90px;
+  position: fixed;
+  margin-left: 270px;
+}
+
+/* Layout1 styling */
+.layout1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.left,
+.right {
+  background-color: #f1f1f1;
+  padding: 20px;
+  width: 48%;
+  border-radius: 8px;
+}
+
+.left ul,
+.right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left li,
+.right li {
+  margin-bottom: 10px;
+}
+
+.left p,
+.right p {
+  font-size: 25px;
+  font-weight: bold;
+}
+.left a,
+.right a {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* Layout2 styling */
+.layout2 {
+  background-color: #ffefcc;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.layout2 p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Layout3 styling */
+.layout3 {                     
+  margin-top: 20px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  align-items: center;
+  padding: 4rem;
+}
+
+.one,
+.two {
+  background-color: #e2f4ff;
+  padding: 20px;
+  width: 40%;
+  height: 13rem;
+  border-radius: 8px;
+}
+
+.one ul,
+.two ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.one li,
+.two li {
+  margin-bottom: 10px;
+}
+
+.one a,
+.two a {
+  font-size: 35px;
+  color: #003366;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 5rem;
+}
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .layout1 {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .top {
+    flex-direction: column;
+  }
+
+  .one,
+  .two {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .bottom {
+    flex-direction: column;
+  }
+
+  .five {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+}
