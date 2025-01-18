@@ -6,7 +6,7 @@ import styles from "../dashboard/dashboard.module.css"; // Adjust this path to w
 interface LayoutProps {
   children: ReactNode;
 }
-
+// commit
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className={styles.container}>
